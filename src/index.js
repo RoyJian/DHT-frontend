@@ -2,16 +2,45 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Axios from './Axios'
 import * as serviceWorker from './serviceWorker';
+import 'bulma/css/bulma.css'
+//import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
+function tick() {
+  ReactDOM.render(
+    <React.StrictMode >
+      <Axios />
+      <App />
+      
+    </React.StrictMode>
+    ,
+    document.getElementById('root')
+  );
+  //registerServiceWorker();
+}
+
+setInterval(tick,1000);
+
+/*let user ="Roy";
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello,{user+"."}</h1>
+      <h2>現在是{new Date().toLocaleTimeString()}</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('root'));
+}*/
+
+
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+

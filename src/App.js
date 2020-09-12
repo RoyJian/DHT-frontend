@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from "react";
+import "bulma/css/bulma.css";
+import "@fortawesome/fontawesome-free/css/all.css"
+import Axios from './Axios';
+//import logo from './logo.svg';
+import "./App.css";
 
+//let DHT=http://0.0.0.0:8000/DHT
+let user = "Roy";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title ">Hello,{user}</h1>
+            <h2 className="subtitle  ">
+              現在的時間是{new Date().toLocaleTimeString()}
+            </h2>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
