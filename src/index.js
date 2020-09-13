@@ -5,14 +5,8 @@ import App from './App';
 import 'bulma/css/bulma.css'
 //import registerServiceWorker from './registerServiceWorker';
 
-fetch('https://roy-lab.tk/apiDHT')
-    .then((response) => {
-        console.log(response)
-        return response.json()
-        //return response.text()
-    }).then((myJson) => {
-        console.log(myJson)
-    })
+
+
 function tick() {
   ReactDOM.render(
     <React.StrictMode >
