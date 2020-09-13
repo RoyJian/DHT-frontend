@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Axios from './Axios'
-import * as serviceWorker from './serviceWorker';
 import 'bulma/css/bulma.css'
 //import registerServiceWorker from './registerServiceWorker';
 
@@ -11,9 +9,7 @@ import 'bulma/css/bulma.css'
 function tick() {
   ReactDOM.render(
     <React.StrictMode >
-      <Axios />
       <App />
-      
     </React.StrictMode>
     ,
     document.getElementById('root')
@@ -41,6 +37,5 @@ function tick() {
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
 
 

@@ -2,7 +2,6 @@
 import React from "react";
 import "bulma/css/bulma.css";
 import "@fortawesome/fontawesome-free/css/all.css"
-import Axios from './Axios';
 //import logo from './logo.svg';
 import "./App.css";
 
