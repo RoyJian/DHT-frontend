@@ -8,14 +8,6 @@ import "./App.css";
 //let DHT=http://0.0.0.0:8000/DHT
 let user = "Roy";
 function App() {
-  fetch('https://roy-lab.tk/apiDHT')
-    .then((response) => {
-        console.log(response)
-        return response.json()
-        //return response.text()
-    }).then((myJson) => {
-        console.log(myJson)
-    })
   return (
     
     <div>
@@ -31,7 +23,7 @@ function App() {
         </div>
       </section>
       <div>
-        <p>{pick}</p>
+        <p></p>
       </div>
     </div>
   );
