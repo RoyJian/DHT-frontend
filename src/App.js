@@ -7,9 +7,13 @@ import "./App.css";
 
 //let DHT=http://0.0.0.0:8000/DHT
 let user = "Roy";
+
 function App() {
+  
   return (
+    
     <div>
+      <script crossOrigin="true" src="..."></script>
       <section className="hero is-primary">
         <div className="hero-body">
           <div className="container">
