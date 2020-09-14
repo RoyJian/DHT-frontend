@@ -7,9 +7,15 @@ import "./App.css";
 
 //let DHT=http://0.0.0.0:8000/DHT
 let user = "Roy";
+const { createProxyMiddleware } = require('http-proxy-middleware');
+createProxyMiddleware({
+  target: 'https://roy-lab.tk/apiDHT',
+  changeOrigin: true
+});
 function App() {
+  let x;
+  
   return (
-    
     <div>
       <script crossOrigin="true" src="..."></script>
       <section className="hero is-primary">
@@ -23,7 +29,7 @@ function App() {
         </div>
       </section>
       <div>
-        <p></p>
+        {/* <p>{this.x}</p> */}
       </div>
     </div>
   );

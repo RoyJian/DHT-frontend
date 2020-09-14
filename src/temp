@@ -1,0 +1,9 @@
+'Accept': '*/*';
+'Accept-Encoding': 'gzip, deflate, br';
+'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7';
+'Access-Control-Expose-Headers': 'access-control-allow-origin';
+'Connection' : 'keep-alive';
+'Sec-Fetch-Dest': 'empty';
+'Sec-Fetch-Mode': 'cors';
+'Sec-Fetch-Site': 'cross-site';
+'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36'
