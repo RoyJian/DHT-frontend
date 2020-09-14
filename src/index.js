@@ -6,6 +6,7 @@ import 'bulma/css/bulma.css'
 //import registerServiceWorker from './registerServiceWorker';
 
 //https://cors-anywhere.herokuapp.com/roy-lab.tk/apiDHT
+
 ReactDOM.render(
   <React.StrictMode >
     <App />

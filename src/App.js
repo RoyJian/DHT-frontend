@@ -11,8 +11,10 @@ class App extends React.Component {
   //Component本身自我更新
   constructor(props) {
     super(props);
-    this.state = {date: new Date(),dht: [] };
+    this.state = {date: new Date(),dht:[]};
+    
   }
+  
 
   //加入生命週期方法
   //componentDidMount()在 component 被 render 到 DOM 之後才會執行
@@ -25,6 +27,7 @@ class App extends React.Component {
       () => this.tickToDHT(),
       5000
     );
+    
   }
 
   componentWillUnmount() {
@@ -54,8 +57,22 @@ class App extends React.Component {
 
   }
 
-  
+  isopen=1;
   render(){
+   if(this.isopen===1){
+    fetch('https://roy-lab.tk/apiDHT')//測試階段
+    .then((response) => {
+        console.log(response)
+        return response.json()
+        //return response.text()
+    }).then((myJson) => {
+        console.log(myJson)
+        this.setState({
+          dht: myJson
+        });
+    })
+    this.isopen=0;
+   }
     return (
       <div>
         <script crossOrigin="true" src="..."></script>
@@ -64,15 +81,15 @@ class App extends React.Component {
             <div className="container">
               <h1 className="title ">Hello,{user}</h1>
               <h2 className="subtitle  ">
-                現在的時間是{this.state.date.toLocaleTimeString()} 
-                溫度是{this.state.dht["H"]}
+                現在的時間是{this.state.date.toLocaleTimeString()}
                 {/* 呼叫上面更新的時間 */}
               </h2>
             </div>
           </div>
         </section>
         <div>
-          {/* <p>{this.x}</p> */}
+          <p>現在濕度{this.state.dht["T"]} </p>
+          <p>現在溫度{this.state.dht["H"]} </p>
         </div>
       </div>
     );
