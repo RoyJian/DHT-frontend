@@ -7,16 +7,11 @@ import "./App.css";
 
 //let DHT=http://0.0.0.0:8000/DHT
 let user = "Roy";
-const { createProxyMiddleware } = require('http-proxy-middleware');
-createProxyMiddleware({
-  target: 'https://roy-lab.tk/apiDHT',
-  changeOrigin: true
-});
 class App extends React.Component {
   //Component本身自我更新
   constructor(props) {
     super(props);
-    this.state = {date: new Date(),dht: []};
+    this.state = {date: new Date(),dht: [] };
   }
 
   //加入生命週期方法

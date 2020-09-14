@@ -6,27 +6,6 @@ import 'bulma/css/bulma.css'
 //import registerServiceWorker from './registerServiceWorker';
 
 //https://cors-anywhere.herokuapp.com/roy-lab.tk/apiDHT
-fetch('https://cors-anywhere.herokuapp.com/roy-lab.tk/apiDHT')//測試階段
-    .then((response) => {
-        console.log(response)
-        return response.json()
-        //return response.text()
-    }).then((myJson) => {
-        console.log(myJson)
-    })
-function tick() {
-  
-  ReactDOM.render(
-    <React.StrictMode >
-      <App date={new Date()}  />
-    </React.StrictMode>
-    ,document.getElementById('root')
-  );
-  
-  //registerServiceWorker();
-}
-
-// setInterval(tick,1000);
 ReactDOM.render(
   <React.StrictMode >
     <App />
