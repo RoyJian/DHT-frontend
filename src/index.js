@@ -6,21 +6,7 @@ import 'bulma/css/bulma.css'
 //import registerServiceWorker from './registerServiceWorker';
 
 //https://cors-anywhere.herokuapp.com/roy-lab.tk/apiDHT
-fetch('https://roy-lab.tk/apiDHT',{ method:'GET',headers:{
-'Accept': '*/*',
-'method':'GET',
-'Accept-Encoding': 'gzip, deflate, br',
-'scheme': 'https',
-'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
-'Access-Control-Expose-Headers': 'access-control-allow-origin',
-'Connection' : 'keep-alive',
-'Sec-Fetch-Dest': 'document',
-'Sec-Fetch-Mode': 'navigate',
-'Content-Type': 'application/expect-ct-report+json',  
-'Host':'roy-lab.tk/apiDHT',
-'Sec-Fetch-Site': 'none',
-'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36'
-}})//測試階段
+fetch('https://cors-anywhere.herokuapp.com/roy-lab.tk/apiDHT')//測試階段
     .then((response) => {
         console.log(response)
         return response.json()
@@ -32,7 +18,7 @@ function tick() {
   
   ReactDOM.render(
     <React.StrictMode >
-      <App />
+      <App date={new Date()}  />
     </React.StrictMode>
     ,document.getElementById('root')
   );
@@ -40,7 +26,13 @@ function tick() {
   //registerServiceWorker();
 }
 
-setInterval(tick,1000);
+// setInterval(tick,1000);
+ReactDOM.render(
+  <React.StrictMode >
+    <App />
+  </React.StrictMode>
+  ,document.getElementById('root')
+);
 
 /*let user ="Roy";
 function tick() {
