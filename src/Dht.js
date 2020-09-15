@@ -90,8 +90,9 @@ class Dht extends React.Component {
                                 </p>
                                 <p className="subtitle has-text-weight-semibold is-size-3   ">
                                 {this.state.dht["H"]}
+                                <i class="fas fa-percent is-size-4"></i>
                                 </p>
-                                <p><i class="fas fa-percent is-size-4"></i></p>
+                        
                             </article>
                         </div>
                         <div className="tile is-parent">
