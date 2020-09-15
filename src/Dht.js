@@ -1,7 +1,9 @@
 import React from "react";
 import "bulma/css/bulma.css";
 import "@fortawesome/fontawesome-free/css/all.css"
+import "font-mfizz/dist/font-mfizz.css"
 import "./App.css";
+
 
 class Dht extends React.Component {
     constructor(props) {
@@ -75,26 +77,31 @@ class Dht extends React.Component {
                             <article className="tile is-child notification is-link">
                                 <p className="title">溫度 &thinsp; 
                                     <i className="fas fa-temperature-low"></i>
+                                   
                                 </p>
-                                <p className="subtitle">
-                                {this.state.dht["T"]}
+                                <p className="subtitle has-text-weight-semibold is-size-3">
+                                {this.state.dht["T"]} 
+                                °C
                                 </p>
                             </article>
                             <article className="tile is-child notification is-warning">
                                 <p className="title">濕度 &thinsp;
                                     <i className="fas fa-tint"></i>
                                 </p>
-                                <p className="subtitle">
+                                <p className="subtitle has-text-weight-semibold is-size-3   ">
                                 {this.state.dht["H"]}
                                 </p>
+                                <p><i class="fas fa-percent is-size-4"></i></p>
                             </article>
                         </div>
                         <div className="tile is-parent">
                             <article className="tile is-child notification is-info">
-                                <p className="title">現在時間 &thinsp;
+                                <p className="title is-size-2 ">現在時間 &thinsp;
                                     <i className="far fa-clock"></i>
                                 </p>
-                                <p className="subtitle">
+                                &thinsp;
+                                <br></br>
+                                <p className="is-size-2 subtitle">
                                     {this.state.date.toLocaleTimeString()}
                                 </p>
                             </article>
@@ -102,8 +109,18 @@ class Dht extends React.Component {
                     </div>
                     <div className="tile is-parent">
                         <article className="tile is-child notification is-danger">
-                            <p className="title">Powered by</p>
-                            <p className="subtitle">Aligned with the right tile</p>
+                            <p className="title">Powered by:</p>
+                            <p className="subtitle is-size-3">
+                                <i class="fab fa-react"></i>&thinsp;React
+                                <br></br>
+                                <i class="fab fa-python"></i>&thinsp; Python
+                                <br></br>
+                                <i class="icon-mongodb"></i> mongodb
+                                <br></br>
+                                <i class="icon-docker"></i> docker 
+                            
+                            
+                            </p>
                             <div className="content">
 
                             </div>
@@ -113,12 +130,20 @@ class Dht extends React.Component {
                 <div className="tile is-parent">
                     <article className="tile is-child notification is-success">
                         <div className="content">
-                            <p className="title">Tall tile</p>
-                            <p className="subtitle">With even more content</p>
-                            <div className="content">
-
-                            </div>
+                            <p className="title is-size-2">成員&thinsp;
+                                <i class="fas fa-user"></i>
+                            </p>
                         </div>
+                        <div className="subtitle is-size-3">
+                            <p>Roy</p>
+                        </div>
+                        <div className="subtitle is-size-3">
+                            <p>Danny</p>
+                        </div>
+                        <div className="subtitle is-size-3">
+                            <p>Bially</p>
+                        </div>
+                    
                     </article>
                 </div>
             </div>
