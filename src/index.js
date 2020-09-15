@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Dht from './Dht'
 import 'bulma/css/bulma.css'
 //import registerServiceWorker from './registerServiceWorker';
 
@@ -10,20 +11,10 @@ import 'bulma/css/bulma.css'
 ReactDOM.render(
   <React.StrictMode >
     <App />
+    <Dht />
   </React.StrictMode>
   ,document.getElementById('root')
 );
-
-/*let user ="Roy";
-function tick() {
-  const element = (
-    <div>
-      <h1>Hello,{user+"."}</h1>
-      <h2>現在是{new Date().toLocaleTimeString()}</h2>
-    </div>
-  );
-  ReactDOM.render(element, document.getElementById('root'));
-}*/
 
 
 

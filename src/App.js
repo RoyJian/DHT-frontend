@@ -8,88 +8,18 @@ import "./App.css";
 //let DHT=http://0.0.0.0:8000/DHT
 let user = "Roy";
 class App extends React.Component {
-  //Component本身自我更新
-  constructor(props) {
-    super(props);
-    this.state = {date: new Date(),dht:[]};
-    
-  }
-  
-
-  //加入生命週期方法
-  //componentDidMount()在 component 被 render 到 DOM 之後才會執行
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
-    this.timerIDtoDHT = setInterval(
-      () => this.tickToDHT(),
-      5000
-    );
-    
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-    clearInterval(this.timerIDtoDHT);
-  }
-  
-  tick() {
-    this.setState({
-      date: new Date()
-    });
-    
-  }
-  //https://cors-anywhere.herokuapp.com/roy-lab.tk/apiDHT
-  tickToDHT(){
-    fetch('https://roy-lab.tk/apiDHT')//測試階段
-    .then((response) => {
-        console.log(response)
-        return response.json()
-        //return response.text()
-    }).then((myJson) => {
-        console.log(myJson)
-        this.setState({
-          dht: myJson
-        });
-    })
-
-  }
-
-  isopen=1;
-  render(){
-   if(this.isopen===1){
-    fetch('https://roy-lab.tk/apiDHT')//測試階段
-    .then((response) => {
-        console.log(response)
-        return response.json()
-        //return response.text()
-    }).then((myJson) => {
-        console.log(myJson)
-        this.setState({
-          dht: myJson
-        });
-    })
-    this.isopen=0;
-   }
+  render() {
     return (
       <div>
         <script crossOrigin="true" src="..."></script>
         <section className="hero is-primary">
           <div className="hero-body">
             <div className="container">
-              <h1 className="title ">Hello,{user}</h1>
-              <h2 className="subtitle  ">
-                現在的時間是{this.state.date.toLocaleTimeString()}
-                {/* 呼叫上面更新的時間 */}
-              </h2>
+              <h1 className="title ">Welcome to RoyLab.</h1>
             </div>
           </div>
         </section>
         <div>
-          <p>現在濕度{this.state.dht["T"]} </p>
-          <p>現在溫度{this.state.dht["H"]} </p>
         </div>
       </div>
     );
