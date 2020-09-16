@@ -19,7 +19,7 @@ class Dht extends React.Component {
     );
         this.timerIDtoDHT = setInterval(
         () => this.tickToDHT(),
-        5000
+        60000
         );
     }
 
