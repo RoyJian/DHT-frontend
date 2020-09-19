@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Dht from './Dht'
+import Weather from './Weather'
 import 'bulma/css/bulma.css'
 //import registerServiceWorker from './registerServiceWorker';
 

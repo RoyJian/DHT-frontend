@@ -6,7 +6,6 @@ import "@fortawesome/fontawesome-free/css/all.css"
 import "./App.css";
 
 //let DHT=http://0.0.0.0:8000/DHT
-let user = "Roy";
 class App extends React.Component {
   render() {
     return (
