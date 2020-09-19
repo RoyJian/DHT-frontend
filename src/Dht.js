@@ -114,10 +114,9 @@ class Dht extends React.Component {
 
                                 </p>
                                 <p className="subtitle has-text-weight-semibold is-size-4">
-                                    實驗室溫度：{this.state.dht["T"]}
+                                    實驗室溫度：{this.state.dht["T"]}°C
                                     <br></br>
-                                    戶外溫度：{this.state.apiT}
-                                °C
+                                    戶外溫度：{this.state.apiT}°C
                                 </p>
                             </article>
                             <article className="tile is-child notification is-warning">
