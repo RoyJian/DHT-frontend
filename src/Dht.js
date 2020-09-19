@@ -113,9 +113,10 @@ class Dht extends React.Component {
                                     <i className="fas fa-temperature-low"></i>
 
                                 </p>
-                                <p className="subtitle has-text-weight-semibold is-size-3">
-                                    {/* {this.state.dht["T"]} */}
-                                    {this.state.apiT}
+                                <p className="subtitle has-text-weight-semibold is-size-4">
+                                    實驗室溫度：{this.state.dht["T"]}
+                                    <br></br>
+                                    戶外溫度：{this.state.apiT}
                                 °C
                                 </p>
                             </article>
@@ -123,10 +124,11 @@ class Dht extends React.Component {
                                 <p className="title">濕度 &thinsp;
                                     <i className="fas fa-tint"></i>
                                 </p>
-                                <p className="subtitle has-text-weight-semibold is-size-3   ">
-                                    {/* {this.state.dht["H"]} */}
-                                    {this.state.apiH}
-                                    <i class="fas fa-percent is-size-4"></i>
+                                <p className="subtitle has-text-weight-semibold is-size-4   ">
+                                    實驗室溫度：{this.state.dht["H"]}
+                                    <br></br>
+                                    戶外濕度：{this.state.apiH}
+                                    <i class="fas fa-percent is-size-6"></i>
                                 </p>
 
                             </article>
