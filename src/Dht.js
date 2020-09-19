@@ -125,7 +125,8 @@ class Dht extends React.Component {
                                     <i className="fas fa-tint"></i>
                                 </p>
                                 <p className="subtitle has-text-weight-semibold is-size-4   ">
-                                    實驗室溫度：{this.state.dht["H"]}
+                                    實驗室濕度：{this.state.dht["H"]}
+                                    <i class="fas fa-percent is-size-6"></i>
                                     <br></br>
                                     戶外濕度：{this.state.apiH}
                                     <i class="fas fa-percent is-size-6"></i>
